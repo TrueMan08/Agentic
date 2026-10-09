@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgentFlow — The Business Capability Layer for Autonomous Agents</title>
-  <meta name="description" content="AgentFlow converts existing startup APIs and business workflows into discoverable, authenticated, policy-controlled capabilities that autonomous agents can safely understand and use.">
+  <title>AgentFlow — Business Capability Infrastructure for Autonomous Agents</title>
+  <meta name="description" content="AgentFlow turns a business’s existing software into a safe, discoverable interface for autonomous agents.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -78,6 +78,7 @@
       width: 100%;
       max-width: 1100px;
       margin: 0 auto;
+      padding: 0 24px;
     }
 
     .brand {
@@ -185,7 +186,7 @@
       letter-spacing: -0.03em;
       color: var(--navy);
       max-width: 880px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .hero-p {
@@ -193,7 +194,22 @@
       line-height: 1.5;
       color: #475569;
       max-width: 820px;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+    }
+
+    /* CLARIFYING CALLOUT NEAR TOP */
+    .hero-notice {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--blue);
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      font-size: 14.5px;
+      color: var(--navy);
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      max-width: 860px;
     }
 
     .hero-thesis-box {
@@ -218,10 +234,10 @@
     }
 
     .hero-thesis-text {
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 600;
       color: var(--navy);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .hero-thesis-axiom {
@@ -593,8 +609,8 @@
       <nav class="header-nav">
         <a href="#thesis">Overview</a>
         <a href="#levels">Capabilities</a>
+        <a href="#roles">Who It's For</a>
         <a href="#product">Architecture</a>
-        <a href="#intent-policy">Policy</a>
         <a href="#safety">Transaction Pack</a>
         <a href="#distribution">Roadmap</a>
       </nav>
@@ -605,16 +621,21 @@
   <!-- 1. HERO & RESTORED THESIS -->
   <section class="hero" id="thesis">
     <div class="container">
-      <div class="thesis-pill">The Business Capability Layer for Autonomous Agents</div>
+      <div class="thesis-pill">Business Capability Infrastructure for Autonomous Agents</div>
       <h1 class="hero-h1">Make your business usable by autonomous agents.</h1>
       <p class="hero-p">
         AgentFlow converts existing startup APIs and business workflows into discoverable, authenticated, policy-controlled capabilities that personal assistants and enterprise agents can safely understand and use.
       </p>
 
+      <!-- PROMINENT DISTINCTION SENTENCE -->
+      <div class="hero-notice">
+        Most AgentFlow capabilities are read-only or request-based. Transaction safety is an advanced module activated only when a capability changes business state.
+      </div>
+
       <div class="hero-thesis-box">
-        <div class="hero-thesis-label">Core Architectural Thesis</div>
+        <div class="hero-thesis-label">Core Product Definition</div>
         <div class="hero-thesis-text">
-          "AgentFlow is the agent-accessibility layer for businesses. It transforms existing APIs and workflows into structured, discoverable capabilities that autonomous agents can understand, authenticate with, and invoke. For capabilities that change business state—such as bookings, payments, inventory, and cancellations—AgentFlow adds intent enforcement and transaction safety."
+          "AgentFlow is the business capability layer for autonomous agents. It converts a company’s existing APIs and workflows into discoverable, authenticated, policy-controlled capabilities that agents can understand and invoke. Read-only and request-based capabilities work without transaction infrastructure. When a capability changes business state—such as booking, payment, inventory, cancellation, or transfer—the Transaction Safety Pack adds holds, idempotency, confirmation, reconciliation, and rollback."
         </div>
         <div class="hero-thesis-axiom">
           Axiom: MCP makes a tool callable. AgentFlow makes a business usable by agents. Transaction safety protects the actions that matter most.
@@ -656,7 +677,7 @@
       <div class="section-eyebrow">01 / Practical Demonstration</div>
       <h2 class="section-title">The 3-Level Capability Progression: Read, Request, Act</h2>
       <p class="section-desc">
-        Not every agent interaction is a high-risk financial transaction. AgentFlow models business access in three progressive tiers, activating transaction safety only when real-world side effects occur.
+        Not every agent interaction is a high-risk transaction. AgentFlow models business access in three progressive tiers, activating transaction safety only when real-world side effects occur.
       </p>
 
       <!-- SVG SEQUENCE DIAGRAM -->
@@ -678,11 +699,11 @@
 
   <!-- ACTORS -->
   <rect x="30" y="22" width="130" height="34" rx="6" fill="#0f172a"/>
-  <text x="95" y="44" font-family="'Archivo', sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">User (Principal)</text>
+  <text x="95" y="44" font-family="'Archivo', sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">User (Consumer)</text>
   <line x1="95" y1="56" x2="95" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
 
   <rect x="190" y="22" width="140" height="34" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="260" y="44" font-family="'Archivo', sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="middle">Autonomous Agent</text>
+  <text x="260" y="44" font-family="'Archivo', sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="middle">Caller (Agent)</text>
   <line x1="260" y1="56" x2="260" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
 
   <rect x="360" y="22" width="170" height="34" rx="6" fill="#1e40af"/>
@@ -699,41 +720,41 @@
 
   <!-- ZONE 1: READ -->
   <rect x="15" y="70" width="890" height="105" fill="#f0fdf4" rx="6" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="30" y="90" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#047857">LEVEL 1: AGENT-READABLE (READ)</text>
+  <text x="30" y="90" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#047857">LEVEL 1: READ (READ-ONLY CAPABILITY)</text>
   
   <line x1="95" y1="110" x2="260" y2="110" stroke="#0f172a" stroke-width="1.3" marker-end="url(#s-arr)"/>
-  <text x="105" y="104" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="600" fill="#0f172a">"Find physiotherapists near Indiranagar under ₹1,500"</text>
+  <text x="105" y="104" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="600" fill="#0f172a">"Find available doctors near me"</text>
 
   <line x1="260" y1="130" x2="445" y2="130" stroke="#1e40af" stroke-width="1.3" marker-end="url(#s-arr-blue)"/>
-  <text x="270" y="124" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">find_providers(category='physio', area='Indiranagar', max_price=1500)</text>
+  <text x="270" y="124" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">find_providers(category='clinic', radius_km=5) &rarr; Evaluates Read Policy</text>
 
   <line x1="445" y1="145" x2="825" y2="145" stroke="#0f172a" stroke-width="1.3" marker-end="url(#s-arr)"/>
   <line x1="825" y1="160" x2="260" y2="160" stroke="#047857" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#s-arr-green)"/>
-  <text x="340" y="156" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#047857">&check; Returns 4 matching clinics &amp; verified slot availability (Read-Only &bull; No Side Effect)</text>
+  <text x="340" y="156" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#047857">&check; Returns 4 matching providers &amp; slot times (Read-Only &bull; No Side Effect &bull; No Hold)</text>
 
   <!-- ZONE 2: REQUEST -->
   <rect x="15" y="188" width="890" height="105" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="30" y="208" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#0f172a">LEVEL 2: AGENT-REQUESTABLE (REQUEST)</text>
+  <text x="30" y="208" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#0f172a">LEVEL 2: REQUEST (STRUCTURED INQUIRY / DRAFT)</text>
 
   <line x1="95" y1="228" x2="260" y2="228" stroke="#0f172a" stroke-width="1.3" marker-end="url(#s-arr)"/>
-  <text x="105" y="222" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="600" fill="#0f172a">"Ask for the earliest consultation slot on Friday"</text>
+  <text x="105" y="222" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="600" fill="#0f172a">"Ask the clinic for an appointment quote"</text>
 
   <line x1="260" y1="248" x2="445" y2="248" stroke="#1e40af" stroke-width="1.3" marker-end="url(#s-arr-blue)"/>
-  <text x="270" y="242" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">request_appointment(clinic_id='c_44', day='Friday') &rarr; Creates Structured Draft</text>
+  <text x="270" y="242" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">request_appointment(clinic_id='c_44', day='Friday') &rarr; Synthesizes Structured Draft</text>
 
   <line x1="445" y1="265" x2="825" y2="265" stroke="#0f172a" stroke-width="1.3" marker-end="url(#s-arr)"/>
   <line x1="825" y1="280" x2="260" y2="280" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#s-arr)"/>
-  <text x="340" y="276" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#0f172a">&check; In-Principle Offer #req_101: Fri 4:00 PM @ ₹1,200 (Non-binding Draft Inquiry)</text>
+  <text x="340" y="276" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#0f172a">&check; In-Principle Quote #req_101: Friday 4:00 PM @ ₹1,200 (Non-binding Offer Draft)</text>
 
   <!-- ZONE 3: ACT (TRANSACTION SAFETY PACK ENGAGED) -->
   <rect x="15" y="306" width="890" height="180" fill="#eff6ff" rx="6" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="30" y="326" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#1e40af">LEVEL 3: AGENT-EXECUTABLE (ACT &bull; TRANSACTION SAFETY PACK ACTIVE)</text>
+  <text x="30" y="326" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#1e40af">LEVEL 3: ACT (TRANSACTION SAFETY PACK ACTIVATED FOR SIDE EFFECT)</text>
 
   <line x1="95" y1="346" x2="260" y2="346" stroke="#0f172a" stroke-width="1.3" marker-end="url(#s-arr)"/>
-  <text x="105" y="340" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="600" fill="#0f172a">"Hold slot and book it for ₹1,200"</text>
+  <text x="105" y="340" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="600" fill="#0f172a">"Book the appointment and pay"</text>
 
   <line x1="260" y1="366" x2="445" y2="366" stroke="#1e40af" stroke-width="1.3" marker-end="url(#s-arr-blue)"/>
-  <text x="270" y="360" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">hold_slot(hold_id='h_99', amount=1200) &rarr; Evaluates Intent Policy &amp; Ceilings</text>
+  <text x="270" y="360" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">hold_slot(inquiry_id='req_101', amount=1200) &rarr; Checks Budget Ceiling</text>
 
   <line x1="445" y1="384" x2="645" y2="384" stroke="#1e40af" stroke-width="1.3" marker-end="url(#s-arr-blue)"/>
   <text x="455" y="378" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">Hold Engine locks inventory (TTL: 600s)</text>
@@ -748,18 +769,19 @@
   <text x="655" y="446" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#0f172a">Atomic Settlement &amp; Booking</text>
 
   <line x1="825" y1="472" x2="95" y2="472" stroke="#047857" stroke-width="1.3" stroke-dasharray="3,3" marker-end="url(#s-arr-green)"/>
-  <text x="220" y="466" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="700" fill="#047857">&check; Booking Confirmed #bk_5510 + Signed Cryptographic Audit Receipt (Zero Double Debits)</text>
+  <text x="220" y="466" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="700" fill="#047857">&check; Booking Confirmed #bk_5510 + Signed Audit Receipt (Zero Double Debits)</text>
 </svg>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3" style="margin-bottom:32px;">
         <div class="card" style="border-top:3px solid #15803d;">
           <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:#15803d; margin-bottom:6px;">LEVEL 1: READ</div>
           <div class="card-title">Agent-Readable</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">"Find available doctors near me."</div>
           <div class="card-desc" style="margin-bottom:12px;">
-            The agent discovers the business, inspects products, searches pricing, and checks real-time availability. Read-only, zero side effects.
+            The agent discovers the business, inspects services, searches pricing, and checks real-time availability. Read-only, zero side effects.
           </div>
-          <pre><code>// Agent query: "Find physios in Indiranagar"
+          <pre><code>// Read Action
 GET /v1/capabilities/clinic/find_providers?area=indiranagar
 Response: 200 OK
 {
@@ -772,10 +794,11 @@ Response: 200 OK
         <div class="card" style="border-top:3px solid #0f172a;">
           <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:#0f172a; margin-bottom:6px;">LEVEL 2: REQUEST</div>
           <div class="card-title">Agent-Requestable</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">"Ask the clinic for an appointment quote."</div>
           <div class="card-desc" style="margin-bottom:12px;">
             The agent submits inquiries, requests custom quotes, creates draft applications, or opens support cases. Structured, non-binding state.
           </div>
-          <pre><code>// Agent inquiry: "Request earliest Friday slot"
+          <pre><code>// Request Action
 POST /v1/capabilities/clinic/request_appointment
 Body: {"clinic_id": "c_44", "day": "Friday"}
 Response: 200 OK
@@ -789,124 +812,104 @@ Response: 200 OK
         <div class="card" style="border-top:3px solid #1e40af; background:#fcfdff;">
           <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:#1e40af; margin-bottom:6px;">LEVEL 3: ACT (TRANSACTION PACK)</div>
           <div class="card-title">Agent-Executable</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">"Book the appointment and pay."</div>
           <div class="card-desc" style="margin-bottom:12px;">
-            The agent books, pays, cancels, or transfers. AgentFlow engages two-phase holds, idempotency locks, user confirmation, and sagas.
+            The agent books, pays, cancels, or transfers. AgentFlow engages two-phase holds, idempotency locks, passkey confirmation, and sagas.
           </div>
-          <pre><code>// Irreversible action: "Hold & Book slot"
+          <pre><code>// Executable Side Effect
 POST /v1/capabilities/clinic/hold_slot
 Header: X-AgentFlow-Mandate: mnd_8820f
 Body: {"inquiry_id": "req_101", "amount": 1200}
 Response: 403 ChallengeRequired
-// Escalates to Passkey / Biometric confirmation</code></pre>
+// Escalates to Passkey / In-App Confirmation</code></pre>
         </div>
+      </div>
+
+      <!-- MULTI-VERTICAL NON-TRANSACTIONAL VALUE TABLE -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:20%;">Industry Vertical</th>
+              <th style="width:28%;">Read Capabilities (Read-Only)</th>
+              <th style="width:26%;">Request Capabilities (Inquiries)</th>
+              <th style="width:26%;">Act Capabilities (Safety Pack)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Travel &amp; Hospitality</strong></td>
+              <td>Search destinations, compare itineraries, inspect cancellation policies.</td>
+              <td>Request custom group quote, hold flight options for review.</td>
+              <td>Book tickets, process deposit, execute automated refund on cancellation.</td>
+            </tr>
+            <tr>
+              <td><strong>Healthcare &amp; Diagnostics</strong></td>
+              <td>Find specialists, inspect doctor credentials, check live clinic slots.</td>
+              <td>Request consultation estimate, submit intake questionnaire draft.</td>
+              <td>Hold slot (10m TTL), confirm booking with passkey, settle consultation fee.</td>
+            </tr>
+            <tr>
+              <td><strong>B2B SaaS Platforms</strong></td>
+              <td>Read account seat usage, query API consumption, inspect documentation.</td>
+              <td>Create support ticket, request enterprise tier custom pricing quote.</td>
+              <td>Execute plan upgrade after manager sign-off, provision new team licenses.</td>
+            </tr>
+            <tr>
+              <td><strong>E-Commerce Marketplace</strong></td>
+              <td>Search product catalog, compare vendor inventory, check shipping estimates.</td>
+              <td>Request bulk wholesale pricing, open return inquiry ticket.</td>
+              <td>Place order with idempotency lock, capture escrow payment, issue refund.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- 3. THE PROBLEM & WHY STARTUPS DON'T BUILD INTERNALLY -->
-  <section id="problem">
+  <!-- 3. WHO USES AGENTFLOW? (ROLES SECTION) -->
+  <section id="roles">
     <div class="container">
-      <div class="section-eyebrow">02 / The Underlying Problem</div>
-      <h2 class="section-title">Why Raw APIs and Tool Calls Break When Agents Arrive</h2>
+      <div class="section-eyebrow">02 / Stakeholders &amp; Personas</div>
+      <h2 class="section-title">Who Uses AgentFlow?</h2>
       <p class="section-desc">
-        Today's developer ecosystem equates exposing an API to an agent with providing an OpenAPI specification or Model Context Protocol (MCP) server. But autonomous agents do not behave like human web applications.
+        AgentFlow is not a consumer chatbot. It is B2B developer infrastructure sold to businesses that want their products accessed safely by autonomous software.
       </p>
 
-      <div class="grid-3" style="margin-bottom:32px;">
+      <div class="grid-4">
         <div class="card">
-          <div class="card-title">Endpoint Fragmentation</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--blue); margin-bottom:4px;">THE BUYER</div>
+          <div class="card-title">Customer</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">Startups &amp; Platforms</div>
           <div class="card-desc">
-            Raw APIs expose granular CRUD endpoints (GET /doctors, POST /slots, DELETE /locks) rather than coherent business capabilities, causing agents to hallucinate execution orders.
+            A business with existing APIs and workflows that wants to monetize autonomous AI traffic without exposing unprotected databases or raw CRUD endpoints.
           </div>
         </div>
+
         <div class="card">
-          <div class="card-title">Unmanaged State &amp; Timeouts</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--blue); margin-bottom:4px;">THE BUILDER</div>
+          <div class="card-title">Integrator</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">Platform Engineering Team</div>
           <div class="card-desc">
-            Autonomous agent frameworks retry failed tool calls automatically on HTTP 504 timeouts. Without distributed idempotency locks, retried tool calls cause double bookings or duplicate charges.
+            CTOs, VP Eng, and API product managers who connect their OpenAPI specs to AgentFlow Studio to model, test, and version capabilities in hours.
           </div>
         </div>
+
         <div class="card">
-          <div class="card-title">Unchecked Parameter Drift</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--blue); margin-bottom:4px;">THE BENEFICIARY</div>
+          <div class="card-title">Consumer</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">Human Principal</div>
           <div class="card-desc">
-            Autonomous agents drift during multi-step conversations, accepting optional upselling fees (e.g. ₹600 premium add-ons) that violate the user's explicit budget instructions.
+            The end user who delegates tasks to their AI assistant, relying on AgentFlow's policy engine to enforce price caps and require passkey confirmation.
           </div>
         </div>
-      </div>
 
-      <div class="card" style="background:#ffffff;">
-        <div class="card-title" style="font-size:18px; margin-bottom:12px;">Why Startups Do Not Build This Internally</div>
-        <p class="card-desc" style="margin-bottom:20px;">
-          A startup engineering team may ask: <em>"Why can't our developers simply build an MCP server and add some custom middleware?"</em> Exposing an individual tool takes an afternoon. Building safe, stateful, multi-agent transactional infrastructure requires eleven distinct distributed systems subsystems:
-        </p>
-
-        <div class="grid-2">
-          <ul class="step-list">
-            <li class="step-item">
-              <div class="step-badge">1</div>
-              <div>
-                <div class="step-content-title">Business Capability Modeling</div>
-                <div class="step-content-desc">Synthesizing low-level database CRUD endpoints into high-level task actions (search, request, hold, confirm).</div>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-badge">2</div>
-              <div>
-                <div class="step-content-title">Multi-Protocol Export</div>
-                <div class="step-content-desc">Simultaneous compilation to Anthropic MCP, Linux Foundation A2A, WebMCP, and REST OpenAPI specs.</div>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-badge">3</div>
-              <div>
-                <div class="step-content-title">Delegated Access &amp; Credential Brokering</div>
-                <div class="step-content-desc">Enforcing OAuth scopes, agent ephemeral keys, and principal session boundaries.</div>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-badge">4</div>
-              <div>
-                <div class="step-content-title">Deterministic Intent Guardrails</div>
-                <div class="step-content-desc">Validating scalar budgets, geofences, and whitelists before tool execution.</div>
-              </div>
-            </li>
-          </ul>
-
-          <ul class="step-list">
-            <li class="step-item">
-              <div class="step-badge">5</div>
-              <div>
-                <div class="step-content-title">Distributed Idempotency &amp; Retries</div>
-                <div class="step-content-desc">Atomic Redis locking and IETF draft-9 idempotency cache to safely absorb unpredictable agent retry bursts.</div>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-badge">6</div>
-              <div>
-                <div class="step-content-title">Two-Phase Holds &amp; Expiration Leases</div>
-                <div class="step-content-desc">Temporary inventory holds with automatic TTL expiration to prevent inventory lockout from abandoned agents.</div>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-badge">7</div>
-              <div>
-                <div class="step-content-title">Saga Compensation &amp; Rollbacks</div>
-                <div class="step-content-desc">Compensating actions when third-party payments clear but downstream booking confirmation fails midway.</div>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-badge">8</div>
-              <div>
-                <div class="step-content-title">Adversarial Conformance Testing</div>
-                <div class="step-content-desc">Simulating adversarial LLM behavior: hallucinated prices, mutated payloads, duplicate replay bursts, and stale slots.</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="callout" style="margin-top:20px;">
-          <div class="callout-title">The Real Commercial Argument</div>
-          <div class="callout-text">
-            The cost is not creating an MCP endpoint. The cost is maintaining safe, reliable behavior when probabilistic AI models interact with stateful business systems.
+        <div class="card">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--blue); margin-bottom:4px;">THE CLIENT</div>
+          <div class="card-title">Caller</div>
+          <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:6px;">Autonomous AI Agents</div>
+          <div class="card-desc">
+            Personal task bots (Instinct, Muse), desktop agents (Claude Computer Use), or enterprise B2B agents calling capabilities via MCP, A2A, or REST.
           </div>
         </div>
       </div>
@@ -919,7 +922,7 @@ Response: 403 ChallengeRequired
       <div class="section-eyebrow">03 / Architectural Distinction</div>
       <h2 class="section-title">Why AgentFlow Exists if MCP Already Exists</h2>
       <p class="section-desc">
-        Anthropic's Model Context Protocol (MCP) solves tool discovery and RPC transport. It does not solve business capability synthesis, delegated user authority, stateful holds, or payment reconciliation.
+        The Model Context Protocol (MCP) solves tool discovery and RPC transport. It does not solve business capability synthesis, delegated user authority, stateful holds, or payment reconciliation.
       </p>
 
       <div class="table-container">
@@ -939,8 +942,8 @@ Response: 403 ChallengeRequired
             </tr>
             <tr>
               <td><strong>Protocol Scope</strong></td>
-              <td>Single proprietary standard (MCP).</td>
-              <td>Multi-protocol compilation: MCP + A2A + WebMCP + REST OpenAPI + Capability Manifests.</td>
+              <td>Single open standard (MCP).</td>
+              <td>Multi-protocol compilation: MCP + A2A protocol + WebMCP + REST OpenAPI specs.</td>
             </tr>
             <tr>
               <td><strong>State Awareness</strong></td>
@@ -955,12 +958,12 @@ Response: 403 ChallengeRequired
             <tr>
               <td><strong>Transaction Safety</strong></td>
               <td>None. Retried tool calls duplicate database mutations and charges.</td>
-              <td>Optional Transaction Safety Pack: IETF draft-9 idempotency, holds, and saga rollbacks.</td>
+              <td>Optional Transaction Safety Pack: HTTP idempotency-key support, holds, and sagas.</td>
             </tr>
             <tr>
               <td><strong>Capability Verification</strong></td>
               <td>None. Client agents guess tool reliability from string descriptions.</td>
-              <td>Adversarial conformance testing lab with signed, versioned verification badges.</td>
+              <td>Verification test lab issuing versioned "AgentFlow Verified" status.</td>
             </tr>
           </tbody>
         </table>
@@ -1014,11 +1017,11 @@ Response: 403 ChallengeRequired
       <div class="section-eyebrow">04 / Product Architecture</div>
       <h2 class="section-title">The Six Core Modules of AgentFlow</h2>
       <p class="section-desc">
-        AgentFlow operates as a comprehensive business capability layer between autonomous agent ecosystems and startup backends, adding less than 18ms of p95 latency overhead.
+        AgentFlow operates as a comprehensive business capability layer between autonomous agent ecosystems and startup backends. Target p95 overhead: under 18ms in reference deployments.
       </p>
 
       <div style="background:#ffffff; border:1px solid var(--border); border-radius:8px; padding:16px; margin-bottom:32px;">
-        <svg viewBox="0 0 920 440" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AgentFlow Capability Layer Architecture">
+        <svg viewBox="0 0 920 440" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AgentFlow Architecture">
   <defs>
     <marker id="arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e40af"/>
@@ -1034,7 +1037,7 @@ Response: 403 ChallengeRequired
   <g transform="translate(24, 25)">
     <rect width="170" height="390" fill="#ffffff" rx="8" stroke="#cbd5e1" stroke-width="1"/>
     <rect width="170" height="32" fill="#f1f5f9" rx="8" stroke="none"/>
-    <text x="14" y="21" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#0f172a">01 / AUTONOMOUS AGENTS</text>
+    <text x="14" y="21" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#0f172a">01 / CALLER AGENTS</text>
     
     <g transform="translate(12, 44)">
       <rect width="146" height="62" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
@@ -1052,19 +1055,19 @@ Response: 403 ChallengeRequired
 
     <g transform="translate(12, 192)">
       <rect width="146" height="74" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
-      <text x="12" y="22" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Enterprise Systems</text>
+      <text x="12" y="22" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Enterprise Agents</text>
       <text x="12" y="38" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#64748b">Procurement &amp; Ops</text>
       <text x="12" y="52" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#1e40af">A2A Protocol Clients</text>
-      <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#64748b">B2B Integrations</text>
+      <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#64748b">B2B Schedulers</text>
     </g>
 
     <g transform="translate(12, 278)">
       <rect width="146" height="98" fill="#eef2ff" rx="6" stroke="#c7d2fe"/>
-      <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="11" font-weight="700" fill="#1e40af">Agent Interfaces</text>
-      <text x="12" y="38" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#334155">&bull; Model Context Protocol</text>
-      <text x="12" y="54" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#334155">&bull; Agent-to-Agent (A2A)</text>
-      <text x="12" y="70" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#334155">&bull; WebMCP &amp; REST SDKs</text>
-      <text x="12" y="86" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#1e40af">Multi-Protocol Access</text>
+      <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="11" font-weight="700" fill="#1e40af">Agent Protocols</text>
+      <text x="12" y="38" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#334155">&bull; Model Context Protocol (MCP)</text>
+      <text x="12" y="54" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#334155">&bull; A2A Protocol</text>
+      <text x="12" y="70" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#334155">&bull; WebMCP &amp; REST APIs</text>
+      <text x="12" y="86" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#1e40af">Universal Interface</text>
     </g>
   </g>
 
@@ -1082,8 +1085,8 @@ Response: 403 ChallengeRequired
       <rect width="186" height="74" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Delegated Access</text>
       <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">OAuth 2.0 &amp; Agent Identity</text>
-      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Ephemeral session signing (PoP)</text>
-      <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#047857">Authenticated Principal</text>
+      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Session request signing (PoP)</text>
+      <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#047857">Principal &amp; Caller Scopes</text>
     </g>
 
     <g transform="translate(12, 128)">
@@ -1092,7 +1095,7 @@ Response: 403 ChallengeRequired
       <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Action scopes &amp; budgets</text>
       <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Data minimization &amp; redaction</text>
       <text x="12" y="66" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Geofence &amp; rate controls</text>
-      <text x="12" y="78" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#1e40af">Zero Untyped Drift</text>
+      <text x="12" y="78" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#1e40af">Zero Parameter Drift</text>
     </g>
 
     <g transform="translate(12, 222)">
@@ -1100,13 +1103,13 @@ Response: 403 ChallengeRequired
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Confirmation Gate</text>
       <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Permits Read/Request freely</text>
       <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Escalates irreversible Acts</text>
-      <text x="12" y="68" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#b91c1c">Passkey / Out-of-band OK</text>
+      <text x="12" y="68" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#b91c1c">Passkey / In-App OK</text>
     </g>
 
     <g transform="translate(12, 308)">
       <rect width="186" height="68" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Audit &amp; Evidence Ledger</text>
-      <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Cryptographic receipts</text>
+      <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Signed transaction receipts</text>
       <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Replayable execution trail</text>
       <text x="12" y="64" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#0f172a">Tamper-Evident Record</text>
     </g>
@@ -1126,33 +1129,33 @@ Response: 403 ChallengeRequired
       <rect width="186" height="74" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Capability Engine</text>
       <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Action dispatch &amp; webhooks</text>
-      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Event streaming &amp; analytics</text>
+      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Target p95 overhead: &lt;18ms</text>
       <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#047857">High-Level Modeling</text>
     </g>
 
     <g transform="translate(12, 128)">
       <rect width="186" height="84" fill="#eff6ff" rx="6" stroke="#bfdbfe"/>
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#1e40af">Transaction Safety Pack</text>
-      <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#334155">Two-phase holds with TTL leases</text>
-      <text x="12" y="50" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#334155">IETF draft-9 idempotency lock</text>
-      <text x="12" y="64" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#334155">Sagas &amp; compensating rollbacks</text>
-      <text x="12" y="76" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#1e40af">Side-Effect Protection</text>
+      <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#334155">Optional for stateful side effects</text>
+      <text x="12" y="50" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#334155">HTTP Idempotency-Key support</text>
+      <text x="12" y="64" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#334155">Holds, TTLs, and Sagas</text>
+      <text x="12" y="76" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#1e40af">Activated for Side Effects</text>
     </g>
 
     <g transform="translate(12, 222)">
       <rect width="186" height="70" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Discovery Manifest</text>
       <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">/.well-known/agent-capability</text>
-      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Self-describing capability specs</text>
-      <text x="12" y="64" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#0f172a">Catalog &amp; Schemas</text>
+      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Open specification proposed by AF</text>
+      <text x="12" y="64" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#0f172a">Self-Describing Specs</text>
     </g>
 
     <g transform="translate(12, 302)">
       <rect width="186" height="74" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
       <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Readiness Conformance</text>
-      <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Adversarial test harness</text>
-      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Verified capability badges</text>
-      <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#047857">Automated Test Lab</text>
+      <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#475569">Verification test suite</text>
+      <text x="12" y="52" font-family="'Source Sans 3', sans-serif" font-size="10.5" fill="#64748b">Issues "AgentFlow Verified" status</text>
+      <text x="12" y="66" font-family="'IBM Plex Mono', monospace" font-size="8.5" fill="#047857">Pre-Deployment Testing</text>
     </g>
   </g>
 
@@ -1175,7 +1178,7 @@ Response: 403 ChallengeRequired
 
     <g transform="translate(12, 118)">
       <rect width="150" height="62" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
-      <text x="12" y="22" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Requests &amp; Quotes</text>
+      <text x="12" y="22" font-family="'Archivo', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Inquiries &amp; Quotes</text>
       <text x="12" y="38" font-family="'Source Sans 3', sans-serif" font-size="11" fill="#64748b">Drafts, Inquiries, Forms</text>
       <text x="12" y="52" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#047857">Request Capabilities</text>
     </g>
@@ -1190,7 +1193,7 @@ Response: 403 ChallengeRequired
 
     <g transform="translate(12, 276)">
       <rect width="150" height="100" fill="#f8fafc" rx="6" stroke="#e2e8f0"/>
-      <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="11" font-weight="700" fill="#0f172a">Compliance Barrier</text>
+      <text x="12" y="20" font-family="'Archivo', sans-serif" font-size="11" font-weight="700" fill="#0f172a">Compliance Boundary</text>
       <text x="12" y="36" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#475569">AgentFlow manages</text>
       <text x="12" y="50" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#475569">external agent access.</text>
       <text x="12" y="68" font-family="'Source Sans 3', sans-serif" font-size="10" font-weight="600" fill="#0f172a">Internal proprietary data</text>
@@ -1213,7 +1216,7 @@ Response: 403 ChallengeRequired
           <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--blue); margin-bottom:4px;">MODULE 02</div>
           <div class="card-title">Agent Interface &amp; Distribution</div>
           <div class="card-desc">
-            Multi-protocol compiler publishing capabilities simultaneously as Anthropic MCP servers, Linux Foundation A2A agent cards, WebMCP integrations, REST APIs, and self-describing <code>/.well-known/agent-capability.json</code> manifests.
+            Multi-protocol compiler publishing capabilities simultaneously as Model Context Protocol (MCP) servers, A2A protocol agent cards, WebMCP integrations, REST APIs, and <code>/.well-known/agent-capability.json</code> manifests.
           </div>
         </div>
 
@@ -1237,7 +1240,7 @@ Response: 403 ChallengeRequired
           <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--blue); margin-bottom:4px;">MODULE 05 (OPTIONAL PACK)</div>
           <div class="card-title" style="color:var(--blue);">Transaction Safety Pack</div>
           <div class="card-desc" style="color:#334155;">
-            Dedicated distributed state engine for capabilities involving real-world side effects: two-phase holds with TTL leases, IETF draft-9 idempotency locks, saga compensating rollbacks, payment confirmation gates, and signed audit receipts.
+            Dedicated distributed state engine for capabilities involving real-world side effects: two-phase holds with TTL leases, idempotency compatible with HTTP idempotency-key conventions, saga rollbacks, and signed audit receipts.
           </div>
         </div>
 
@@ -1245,7 +1248,7 @@ Response: 403 ChallengeRequired
           <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:700; color:var(--navy); margin-bottom:4px;">MODULE 06</div>
           <div class="card-title">Readiness &amp; Conformance Lab</div>
           <div class="card-desc">
-            Automated testing laboratory that executes adversarial integration tests against merchant staging environments (schema fuzzing, retry storms, hold timeouts, race conditions) before issuing cryptographic 30-day verification certificates.
+            Capability verification and certification service that executes test suites against merchant staging environments (schema fuzzing, retry storms, hold timeouts, race conditions) before issuing versioned "AgentFlow Verified" badges.
           </div>
         </div>
       </div>
@@ -1257,7 +1260,7 @@ Response: 403 ChallengeRequired
           <ul style="margin-left:18px; font-size:14px; color:#475569; line-height:1.7;">
             <li><strong>Not an LLM Provider:</strong> We do not train, tune, or host foundation models.</li>
             <li><strong>Not a Generic Chatbot:</strong> We do not provide consumer chat windows.</li>
-            <li><strong>Not a Replacement for Stripe:</strong> We orchestrate payments; Stripe/Razorpay handles card settlement.</li>
+            <li><strong>Not a Replacement for Stripe:</strong> We orchestrate business state; payment processors handle card settlement.</li>
             <li><strong>Not a Replacement for Kong:</strong> We manage business capability semantics, not L7 network routing.</li>
             <li><strong>Not Restricted to Transactions:</strong> We expose read-only catalogs, inquiries, and requests as first-class capabilities.</li>
           </ul>
@@ -1272,8 +1275,8 @@ Response: 403 ChallengeRequired
             <li>High-level business capability modeling engine.</li>
             <li>Multi-protocol publishing layer (MCP, A2A, WebMCP, REST).</li>
             <li>Deterministic identity, scope, and intent policy enforcement.</li>
-            <li>Managed transaction safety pack for stateful operations.</li>
-            <li>Automated capability readiness testing and certification authority.</li>
+            <li>Optional managed transaction safety pack for stateful operations.</li>
+            <li>Capability verification and testing service.</li>
           </ul>
         </div>
       </div>
@@ -1334,7 +1337,7 @@ Response: 403 ChallengeRequired
         <div class="card">
           <div class="card-title">Pragmatic 3-Tier Agent Identity Roadmap</div>
           <div class="card-desc" style="margin-bottom:14px;">
-            A realistic progressive identity model rather than speculative hardware attestation:
+            A realistic progressive identity model rather than speculative universal attestation:
           </div>
           <div style="display:flex; flex-direction:column; gap:12px;">
             <div style="border-left:3px solid #64748b; padding-left:12px;">
@@ -1347,7 +1350,7 @@ Response: 403 ChallengeRequired
             </div>
             <div style="border-left:3px solid var(--success); padding-left:12px;">
               <strong style="color:var(--success); font-size:14px;">Level 3: Attested Identity (Ecosystem Roadmap)</strong>
-              <div style="font-size:13px; color:#475569;">Hardware enclave or secure execution environment attestation (AWS Nitro, Apple Secure Enclave) when supported.</div>
+              <div style="font-size:13px; color:#475569;">Hardware enclave or secure execution environment attestation (AWS Nitro, Apple Secure Enclave) when supported by client.</div>
             </div>
           </div>
         </div>
@@ -1361,7 +1364,7 @@ Response: 403 ChallengeRequired
       <div class="section-eyebrow">06 / Optional High-Impact Module</div>
       <h2 class="section-title">Transaction Safety Pack: Safeguarding Side Effects</h2>
       <p class="section-desc">
-        When an agent moves from reading information to modifying real-world business state (booking, purchasing, inventory allocation, cancellation), the Transaction Safety Pack guarantees distributed reliability.
+        When an agent moves from reading information to modifying real-world business state (booking, purchasing, inventory allocation, cancellation), the Transaction Safety Pack activates.
       </p>
 
       <div class="table-container">
@@ -1416,19 +1419,19 @@ Response: 403 ChallengeRequired
           <div style="font-size:11.5px; color:#64748b;">In conformance test suite</div>
         </div>
         <div class="card" style="text-align:center;">
-          <div style="font-family:'Archivo', sans-serif; font-size:26px; font-weight:800; color:var(--success);">0</div>
-          <div style="font-size:12px; font-weight:600; color:var(--navy); margin-top:4px;">Duplicate Settlements</div>
+          <div style="font-family:'Archivo', sans-serif; font-size:26px; font-weight:800; color:var(--success);">Validated</div>
+          <div style="font-size:12px; font-weight:600; color:var(--navy); margin-top:4px;">Zero Duplicate Settlements</div>
           <div style="font-size:11.5px; color:#64748b;">In controlled test runs</div>
         </div>
         <div class="card" style="text-align:center;">
           <div style="font-family:'Archivo', sans-serif; font-size:26px; font-weight:800; color:var(--navy);">&lt; 18ms</div>
-          <div style="font-size:12px; font-weight:600; color:var(--navy); margin-top:4px;">P95 Gateway Overhead</div>
-          <div style="font-size:11.5px; color:#64748b;">Ultra-lightweight Go proxy</div>
+          <div style="font-size:12px; font-weight:600; color:var(--navy); margin-top:4px;">Target P95 Overhead</div>
+          <div style="font-size:11.5px; color:#64748b;">Reference Go proxy deployment</div>
         </div>
         <div class="card" style="text-align:center;">
           <div style="font-family:'Archivo', sans-serif; font-size:26px; font-weight:800; color:var(--navy);">100%</div>
           <div style="font-size:12px; font-weight:600; color:var(--navy); margin-top:4px;">Replayable Audit Trail</div>
-          <div style="font-size:11.5px; color:#64748b;">HMAC signed evidence log</div>
+          <div style="font-size:11.5px; color:#64748b;">Signed evidence record</div>
         </div>
       </div>
     </div>
@@ -1440,7 +1443,7 @@ Response: 403 ChallengeRequired
       <div class="section-eyebrow">07 / Implementation &amp; Discovery</div>
       <h2 class="section-title">The Capability Manifest: How Agents Discover Your Business</h2>
       <p class="section-desc">
-        Hosted at <code>/.well-known/agent-capability.json</code>, this standardized document tells agents what your business does, which capabilities are available, and which actions require elevated permissions.
+        Hosted at <code>/.well-known/agent-capability.json</code>, this AgentFlow capability manifest is an open specification proposed by AgentFlow to tell agents what your business does, which capabilities are available, and which actions require elevated confirmation.
       </p>
 
       <div class="card" style="background:#ffffff; margin-bottom:28px;">
@@ -1591,7 +1594,7 @@ Response: 403 ChallengeRequired
             </tr>
             <tr>
               <td><strong>Duplicate Payment Retries</strong></td>
-              <td>IETF draft-9 idempotency key lock with atomic Redis distributed lease.</td>
+              <td>HTTP Idempotency-Key support with atomic distributed cache locks.</td>
               <td>Cached response payload returned with <code>Idempotent-Replay: true</code>.</td>
             </tr>
             <tr>
@@ -1659,7 +1662,7 @@ Response: 403 ChallengeRequired
             </tr>
             <tr>
               <td><strong>Protocols</strong></td>
-              <td>MCP, A2A, WebMCP</td>
+              <td>Model Context Protocol (MCP), A2A Protocol, WebMCP</td>
               <td>Multi-protocol publishing layer compiling one capability across all standards.</td>
             </tr>
             <tr>
@@ -1694,7 +1697,7 @@ Response: 403 ChallengeRequired
       <div class="hero-thesis-box" style="margin-top:20px;">
         <div class="hero-thesis-label">The Key Positioning Sentence</div>
         <div class="hero-thesis-text">
-          "AgentFlow is the layer that turns a startup’s internal software into an external agent-facing product surface."
+          "AgentFlow turns a business’s existing software into a safe, discoverable interface for autonomous agents."
         </div>
       </div>
     </div>
@@ -1706,7 +1709,7 @@ Response: 403 ChallengeRequired
       <div class="section-eyebrow">10 / Interactive Verification</div>
       <h2 class="section-title">AgentFlow Readiness &amp; Conformance Lab</h2>
       <p class="section-desc">
-        Before an agent is permitted to invoke a business capability, AgentFlow tests the endpoint against adversarial inputs, protocol compliance, retry storms, and hold expirations. Test a live clinic capability below:
+        Before an agent is permitted to invoke a business capability, our capability verification service tests the endpoint against adversarial inputs, protocol compliance, retry storms, and hold expirations. Test a live clinic capability below:
       </p>
 
       <div class="runner-box">
@@ -1726,7 +1729,7 @@ Response: 403 ChallengeRequired
           <div class="test-item" id="t1">
             <div>
               <strong>TEST 01: Multi-Protocol Discovery &amp; Schema Validity</strong>
-              <div style="font-size:12px; color:#64748b;">Validates manifest syntax against Anthropic MCP, A2A, and OpenAPI schemas.</div>
+              <div style="font-size:12px; color:#64748b;">Validates manifest syntax against Model Context Protocol (MCP), A2A, and OpenAPI schemas.</div>
             </div>
             <span class="test-status pending" id="s1">READY</span>
           </div>
@@ -1775,9 +1778,9 @@ Response: 403 ChallengeRequired
         <div id="certOutput" style="display:none; margin-top:20px; padding:16px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px;">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
             <div>
-              <strong style="color:#15803d; font-family:'Archivo', sans-serif;">&check; CAPABILITY VERIFIED &amp; CERTIFIED</strong>
+              <strong style="color:#15803d; font-family:'Archivo', sans-serif;">&check; CAPABILITY VERIFIED: "AgentFlow Verified"</strong>
               <div style="font-size:12px; color:#166534; font-family:'IBM Plex Mono', monospace; margin-top:2px;">
-                Badge: <code>AgentFlow-Certified-1.4.2</code> | Expiry: 30 Days (Valid until Nov 9, 2026)
+                Badge: <code>AgentFlow Verified v1.4.2</code> | Staging Evaluation Valid for 30 Days
               </div>
             </div>
             <span style="font-family:'IBM Plex Mono', monospace; font-size:11px; background:#ffffff; border:1px solid #bbf7d0; padding:4px 8px; border-radius:4px; color:#15803d;">
@@ -1808,7 +1811,7 @@ Response: 403 ChallengeRequired
         <div class="card">
           <div class="card-title">2. Multi-Protocol Gateways</div>
           <div class="card-desc">
-            Native endpoints plug directly into Claude Desktop, Cursor, OpenAI Agents, WebMCP browsers, and Linux Foundation Agent-to-Agent (A2A) protocol runtimes.
+            Native endpoints plug directly into Claude Desktop, Cursor, OpenAI Agents, WebMCP browsers, and the A2A protocol runtime ecosystem.
           </div>
         </div>
         <div class="card">
@@ -1828,10 +1831,10 @@ Response: 403 ChallengeRequired
             <div style="font-weight:700; color:var(--navy); font-size:14px; margin:4px 0;">Read, Request &amp; Transaction Safety</div>
             <ul style="font-size:12.5px; color:#475569; line-height:1.6; margin-left:14px;">
               <li>Capability Builder (OpenAPI to actions)</li>
-              <li>MCP, A2A &amp; WebMCP export</li>
+              <li>MCP, A2A protocol &amp; WebMCP export</li>
               <li>Identity &amp; deterministic policy gate</li>
               <li>Two-phase hold &amp; idempotency pack</li>
-              <li>Automated conformance test lab</li>
+              <li>Automated conformance verification lab</li>
             </ul>
           </div>
           <div>
@@ -1861,9 +1864,9 @@ Response: 403 ChallengeRequired
   <footer>
     <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
       <div>
-        <strong style="color:var(--navy);">AgentFlow</strong> &mdash; The Business Capability Layer for Autonomous Agents.
+        <strong style="color:var(--navy);">AgentFlow</strong> &mdash; Business Capability Infrastructure for Autonomous Agents.
         <div style="font-size:12px; margin-top:4px;">
-          MCP makes a tool callable. AgentFlow makes a business usable by agents.
+          AgentFlow turns a business’s existing software into a safe, discoverable interface for autonomous agents.
         </div>
       </div>
       <div style="font-family:'IBM Plex Mono', monospace; font-size:12px;">
